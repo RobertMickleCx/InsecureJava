@@ -9,8 +9,10 @@ public class CommandInjectionExample {
         String name = reader.readLine();
 
         // Vulnerable code: directly concatenating user input into a shell command
-        String command = "echo Hello, " + name;
-        Process process = Runtime.getRuntime().exec(command);
+        //String command = "echo Hello, " + name;
+        //Process process = Runtime.getRuntime().exec(command);
+
+        System.out.println("Hello, " + name)
 
         // Read the output of the command
         BufferedReader outputReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
